@@ -1,0 +1,24 @@
+Output of WHILE:
+
+flex while.l
+bison while.y
+gcc -o t while.tab.c -ll -ly
+./t
+
+
+Enter the expression : while (k+8) k=a*b+c;
+L1:                    |Function lab1()
+
+t0 = k + 8             (Function codegen (E+E) for K+8 )  
+
+t1 = not t0            | 
+if t1 goto L0          |  Function lab2() 
+
+t2 = a * b             (Function codegen (E*E) for a*b )
+t3 = t2 + c            (Function codegen (E+E) for t2 + c
+
+k = t3                 (Function codegen_assign    
+
+goto L1                |
+L0:                    | Function lab3()
+
