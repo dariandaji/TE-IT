@@ -1,0 +1,17 @@
+Group A :Website Design (HTML5, CSS, Bootstrap)
+
+Assignment No. 1: Using HTML5 layout tags develop informative page with sections which include various
+images, links to other pages for navigation, make use of all possible formatting (for example font, color etc.).
+Assignment No. 2: Apply CSS properties Border, margins, Padding, Navigation, dropdown list to page created
+in first assignment.
+
+Group B : Website GUI Validation (JavaScript, PHP)
+
+Assignment No. 3: Create form in HTML with all form elements apply form validations (e.g. Email, mobile,
+Pin code, Password).
+Assignment No. 4: Validate URL, Email, Required using functions empty, preg_match, filter_var in PHP.
+
+Group C : Website Working (Java Servlet)
+
+Assignment No. 5: Understand servlet life cycle, create login page and apply proper validations with
+appropriate messages using doGet()/ doPost() methods.

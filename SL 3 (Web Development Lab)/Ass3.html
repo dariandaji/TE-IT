@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head><title>Registration Form</title>
+<script type="text/javascript">
+	
+function validate()
+      {
+      
+         if( document.myForm.firstname.value == "" )
+         {
+            alert( "Please provide your first name!" );
+            document.myForm.firstname.focus() ;
+            return false;
+         }
+
+         if( document.myForm.lastname.value == "" )
+         {
+            alert( "Please provide your last name!" );
+            document.myForm.lastname.focus() ;
+            return false;
+         }
+         if( document.myForm.quantity.value == "" )
+         {
+            alert( "Please provide your Age!" );
+            return false;
+         }
+         if( document.myForm.gender.value == "" )
+         {
+            alert( "Please provide your Gender!" );
+            return false;
+         }
+         if( document.myForm.bday.value == "" )
+         {
+            alert( "Please provide your Date of Birth!" );
+            return false;
+         }
+         if( document.myForm.Year.value == "-1" )
+         {
+            alert( "Please provide your Year Of Study!" );
+            return false;
+         }
+
+         
+         if( document.myForm.address.value=="")
+         {
+            alert( "Please provide your Address!" );
+            return false;
+         }
+         if( document.myForm.Zip.value == "" ||
+         isNaN( document.myForm.Zip.value ) ||
+         document.myForm.Zip.value.length != 5 )
+         {
+            alert( "Please provide a zip in the format #####." );
+            document.myForm.Zip.focus() ;
+            return false;
+         }
+         if( document.myForm.email.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            return false;
+         }
+         
+	    
+	    var regex = /^[a-zA-z]*$/                 
+	    var fname = document.myForm.firstname.value;
+	    var lname = document.myForm.lastname.value;
+
+         if(!regex.test(fname))
+         {
+            alert( "Invalid First Name!" );
+            return false;
+         }
+
+         if(!regex.test(lname))
+         {
+            alert( "Invalid Last Name!" );
+            return false;
+         }
+
+         
+         return( true );
+      }
+
+</script>
+
+</head>
+<body>
+
+<h2><center>Registration Form</center></h2>
+
+<form name="myForm" onsubmit="return(validate());">
+  First name:<br>
+  <input type="text" name="firstname">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname">
+  <br><br>
+  Age :
+  <input type="number" name="quantity" min="17" max="24"><br>
+  Gender : <br>
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other <br><br>
+  Date Of Birth :
+  <input type="date" name="bday"><br><br>
+  Year of Study : <br>
+   <select name="Year">
+   	<option value="-1" selected>[CHOOSE]</option>
+   	<option value="1">FE</option>
+    <option value="2">SE</option>
+    <option value="3">TE</option>
+    <option value="4">BE</option>
+   </select><br><br>
+   Address : <br>
+   <textarea name="address" rows="10" cols="30">
+</textarea><br><br>
+Pin code : <br>
+<input type="text" name="Zip" /><br>
+Please select all that apply :<br>
+<input type="checkbox" name="choice1" value="S">I am a student
+<br>
+<input type="checkbox" name="choice2" value="C">I am a CR
+<br>
+<input type="checkbox" name="choice3" value="I">I am an ITSA member
+<br>
+<input type="checkbox" name="choice4" value="SC">I am a Student Council member
+<br>
+<br>
+E-mail: 
+  <input type="email" name="email">
+<br>
+
+<br><br>
+   <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
